@@ -4,7 +4,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 15% 0% 0 6%;
+  padding: 15% 0% 0% 6.8%;
 }
 .image{
   background-image: url(../../../../assets/home/banner/bgbanner.png);
@@ -52,7 +52,7 @@ canvas {
   background: transparent !important;
 }
 .earth{
-  margin: 0px 0px 0px 47%;
+  margin: 0px 0px 0px 48%;
 }
 
 .earth-banner{
