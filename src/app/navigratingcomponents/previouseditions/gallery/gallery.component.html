@@ -1,0 +1,11 @@
+<div class="gallery-section">
+  <h2>
+    The Fame <span class="highlight">Gallery</span>
+  </h2>
+
+  <div class="grid-gallery">
+    <div class="image-box" *ngFor="let img of images" [ngClass]="img.class">
+      <img [src]="img.src" alt="Gallery image" />
+    </div>
+  </div>
+</div>

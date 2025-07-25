@@ -1,0 +1,87 @@
+.about-banner {
+  background-image: url(../../../assets/about/banner_about.png);
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10% 0% 0%;
+
+}
+
+.data {
+  padding: 7% 25%;
+  color: #fff;
+}
+
+.data .about {
+  font-size: 9rem;
+  padding: 10% 0px 0px 0px;
+}
+
+.data .us {
+  font-size: 9rem;
+  margin-top: -10%;
+  margin-left: 55%;
+}
+
+@media screen and (max-width: 1200px) {
+  .data {
+    padding: 7% 15%;
+  }
+
+  .data .about,
+  .data .us {
+    font-size: 7rem;
+  }
+
+  .data .us {
+    margin-left: 45%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .data {
+    padding: 7% 10%;
+  }
+
+  .data .about,
+  .data .us {
+    font-size: 6rem;
+  }
+
+  .data .us {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-banner {
+    height: auto;
+    background-size: cover;
+    padding-bottom: 10%;
+    margin: 24% 1% 0%;
+  }
+
+  .data {
+    padding: 10% 5%;
+    text-align: center;
+  }
+
+  .data .about,
+  .data .us {
+    font-size: 4.5rem;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .data {
+    padding: 12% 4%;
+  }
+
+  .data .about,
+  .data .us {
+    font-size: 3.2rem;
+  }
+}

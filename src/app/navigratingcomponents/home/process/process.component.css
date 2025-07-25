@@ -1,0 +1,34 @@
+.banner {
+  background-image: url(../../../../assets/home/banner/RegistrationProcess.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 110vh;
+  background-color: #EFEFEF;
+  background-attachment: fixed;
+}
+
+.banner h1 {
+  text-align: center;
+  color: #fff;
+  padding: 8% 0%;
+  font-size: 4rem;
+  font-weight: 300;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 80px 0;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+    padding: 0 10%;
+    text-align: center;
+    line-height: 1.3;
+  }
+}

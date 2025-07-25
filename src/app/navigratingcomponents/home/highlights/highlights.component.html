@@ -1,0 +1,46 @@
+<div class="highlights-container">
+  <div class="main-video">
+    <!-- Show image and play button until clicked -->
+    <ng-container *ngIf="!isPlaying; else videoPlayer">
+      <img src="../../../../assets/home/videotrumb/videotumb.png" alt="Main Video" class="main-img" />
+      <div class="play-button" (click)="playVideo()">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </ng-container>
+
+    <!-- Show YouTube video when playing -->
+    <ng-template #videoPlayer>
+      <div class="video-wrapper">
+        <iframe
+          [src]="videoUrl"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay; encrypted-media">
+        </iframe>
+      </div>
+    </ng-template>
+
+    <div class="highlights-title">
+      <span class="orange">Our Highlights</span> in the year 2025
+    </div>
+
+    <div class="container1">
+      <div class="left">
+        <img src="../../../../assets/home/videotrumb/videotrumb6.png" alt="">
+      </div>
+      <div class="right">
+        <img src="../../../../assets/home/videotrumb/videotrumb1.png" alt="">
+        <img src="../../../../assets/home/videotrumb/videotrumb3.png" alt="">
+      </div>
+    </div>
+    <div class="container2">
+      <div class="left">
+        <img src="../../../../assets/home/videotrumb/videotrumb4.png" alt="">
+        <img src="../../../../assets/home/videotrumb/videotrumb2.png" alt="">
+      </div>
+      <div class="right">
+        <img src="../../../../assets/home/videotrumb/videotrumb5.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>

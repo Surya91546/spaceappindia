@@ -1,0 +1,169 @@
+.banner{
+  background-image: url(../../../../assets/home/banner/backgroundcolor.png);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15% 0% 0 6%;
+}
+.image{
+  background-image: url(../../../../assets/home/banner/bgbanner.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.details .data{
+  color: #fff;
+  padding: 0% 2%;
+}
+
+.details .data h1{
+  color: #FF8031;
+  font-size: 3rem;
+}
+.details{
+  display: flex;
+  text-align: start;
+  padding: 6.5% 2% 0;
+}
+.details .data h2{
+  font-size: 1.3rem;
+  margin: -6% 0 0;
+  font-weight: 400;
+}
+
+
+.details .data-right{
+  color: #fff;
+  padding: 0px 0px 0px 24%;
+}
+.details .data-right h1{
+   color: #FF8031;
+   font-size: 2.3rem;
+   font-weight: 700;
+}
+
+.details .data-right h2{
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: -10%;
+}
+canvas {
+  background: transparent !important;
+}
+.earth{
+  margin: 0px 0px 0px 47%;
+}
+
+.earth-banner{
+  display: flex;
+  color: #fff;
+}
+.earth-banner .logo img{
+  margin: 17px 0px 0 20px;
+}
+/* Your existing CSS remains same */
+
+/* Responsive for Large screens (1200px and below) */
+@media screen and (max-width: 1200px) {
+  .banner {
+    padding: 12% 5%;
+  }
+  .details .data h1 {
+    font-size: 2.5rem;
+  }
+  .details .data h2 {
+    font-size: 1.2rem;
+  }
+  .details .data-right h1 {
+    font-size: 2rem;
+  }
+  .details .data-right h2 {
+    font-size: 2.5rem;
+  }
+  .earth {
+    margin: 0 0 0 40%;
+  }
+}
+
+/* Responsive for Medium screens (992px and below) */
+@media screen and (max-width: 992px) {
+  .banner {
+    padding: 10% 4%;
+    height: auto;
+  }
+  .image {
+    height: 70vh;
+    background-size: cover;
+  }
+  .details {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 5% 0;
+  }
+  .details .data {
+    padding: 1% 4%;
+    text-align: center;
+  }
+  .details .data h1 {
+    font-size: 2rem;
+  }
+  .details .data h2 {
+    font-size: 1.1rem;
+  }
+  .details .data-right {
+    padding: 3% 0 0;
+    text-align: center;
+  }
+  .earth {
+    margin: 0 auto;
+  }
+}
+
+/* Responsive for Small screens (768px and below) */
+@media screen and (max-width: 768px) {
+  .details {
+    display: none;
+  }
+  .image .earth {
+    display: none;
+  }
+  .image {
+    background-image: url('https://wallpapers.com/images/featured/4k-space-9w27dqmc4nrs3xwd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+  }
+  .banner {
+    height: 69%;
+    padding: 19% 0;
+  }
+}
+
+/* Responsive for Extra-small screens (576px and below) */
+@media screen and (max-width: 576px) {
+  .banner {
+    padding: 15% 0;
+    height: auto;
+  }
+  .image {
+    height: 50vh;
+  }
+}
+
+/* Responsive for Ultra-small (400px and below) */
+@media screen and (max-width: 400px) {
+  .banner {
+    padding: 12% 0;
+  }
+  .image {
+    height: 40vh;
+  }
+}
+
+

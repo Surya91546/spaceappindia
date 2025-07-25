@@ -1,0 +1,264 @@
+/* === Container & Layout === */
+.gallery-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 20%;
+}
+
+.gallery-header .highlight {
+  color: #FF8031;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.gallery-header h3 {
+  color: #012950;
+  font-size: 40px;
+  margin-top: 5px;
+  font-weight: 200;
+}
+
+/* === Year Selection Section === */
+.year-section {
+  display: block;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  max-width: 28%;
+}
+
+.years span {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.years .active {
+  color: #FF8031;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.year-labels {
+  display: block;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.year-labels h1 {
+  font-size: 70px;
+  margin: 0;
+  color: #000;
+  padding: 0px 0px 0px 35%;
+  font-weight: 200;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* === Gallery Grid === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  margin: -18% 0 0 0;
+  
+}
+
+/* === Image Animations === */
+.img {
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform: translateY(20px);
+  /* fallback */
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Images visible on scroll */
+.img.in-view {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Direction-based animations */
+.direction1 {
+  transform: translateX(-100px);
+}
+
+/* From Left */
+.direction2 {
+  transform: translateY(100px);
+}
+
+/* From Bottom */
+.direction3 {
+  transform: translateX(100px);
+}
+
+/* From Right */
+.direction4 {
+  transform: translateY(-100px);
+}
+
+/* From Top */
+
+/* === Grid Positioning (Custom Layout) === */
+.img1 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+.img2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 46% 5px 0 45px;
+}
+
+.img3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  margin: 47% 53px 0 0;
+}
+
+.img4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.img5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.img6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.img7 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.img8 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  margin: -62% 0 0;
+}
+
+/* Tablets and smaller desktops */
+@media screen and (max-width: 992px) {
+  .gallery-container {
+    padding: 20px;
+  }
+
+  .gallery-header h3 {
+    font-size: 32px;
+  }
+
+  .gallery-header .highlight {
+    font-size: 22px;
+  }
+
+  .year-section {
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .years {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .year-labels {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .year-labels h1 {
+    font-size: 48px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .vertical-text {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0;
+  }
+
+  .img1 {
+    grid-column: 1 / 3;
+  }
+
+  .img2,
+  .img3,
+  .img8 {
+    margin: 0 !important;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 576px) {
+  .gallery-header h3 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .gallery-header .highlight {
+    font-size: 18px;
+  }
+
+  .year-labels h1 {
+    font-size: 36px;
+  }
+
+  .vertical-text {
+    font-size: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: none;
+    gap: 15px;
+  }
+
+  .img {
+    margin: 0 !important;
+    grid-column: auto !important;
+  }
+
+  .img1 {
+    grid-column: auto;
+  }
+}

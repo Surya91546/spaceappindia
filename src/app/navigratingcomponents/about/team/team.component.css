@@ -1,0 +1,153 @@
+section {
+  background-color: #030014;
+  justify-content: center;
+  text-align: center;
+  
+
+}
+
+.map {
+  height: 37rem;
+  z-index: 1;
+  margin: 0% 15%;
+
+}
+
+.mapglobe {
+  margin-top: -25%;
+  z-index: 1;
+}
+
+h3 {
+  color: #FF8031;
+  font-family: "Inter", sans-serif;
+  font-size: 45px;
+  padding: 7% 0px 0px;
+}
+
+p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  padding-bottom: 60px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .map {
+    height: 30rem;
+    margin: 0% 10%;
+  }
+
+  .mapglobe {
+    margin-top: -20%;
+  }
+
+  h3 {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .map {
+    height: 26rem;
+    margin: 0% 8%;
+  }
+
+  .mapglobe {
+    margin-top: -18%;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 2.8rem;
+    padding-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map {
+    height: 22rem;
+    margin: 0% 5%;
+  }
+
+  .mapglobe {
+    margin-top: -15%;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 2.2rem;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .map {
+    height: 18rem;
+    margin: 0% 3%;
+  }
+
+  .mapglobe {
+    margin-top: -12%;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .map {
+    height: 15rem;
+  }
+
+  .mapglobe {
+    margin-top: -10%;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+  }
+}

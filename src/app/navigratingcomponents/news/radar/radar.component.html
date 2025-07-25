@@ -1,0 +1,13 @@
+<div class="radar-container">
+  <div class="radar">
+    <ng-lottie
+      [options]="options"
+      (animationCreated)="handleAnimation($event)">
+    </ng-lottie>
+  </div>
+
+  <div class="text">
+    <h2><span class="highlight">Get your Team</span> on the Radar</h2>
+    <button (click)="startSweep()">Explore the Challenge</button>
+  </div>
+</div>

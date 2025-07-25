@@ -1,0 +1,40 @@
+.banner {
+  background-image: url(../../../../assets/previous/previous.png);
+  height: 140vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 5% 0px;
+  margin: 8% 0;
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  color: #022547;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+
+.banner h2 {
+  font-size: 2.8rem;
+  color: #022547;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 15% 20px;
+    margin: 10% 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .banner h1,
+  .banner h2 {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}

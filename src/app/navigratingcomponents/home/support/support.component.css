@@ -1,0 +1,95 @@
+section {
+  background-color: #0F1F3D;
+  padding: 5% 0px;
+}
+
+.details {
+  background-image: url(../../../../assets/home/companies/banner.png);
+  height: 120vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 31% 20% 0%;
+  margin-top: -20%;
+
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.image-container {
+  flex: 1;
+  margin: 10px 20px;
+
+}
+
+.image-container img {
+  width: 96%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+
+}
+
+.details1 {
+  text-align: center;
+  color: #FF8031;
+  padding: 10% 0px 0px;
+  font-family: "Inter", sans-serif;
+}
+.details1 h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.desc {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 300 !important;
+}
+@media screen and (max-width: 992px) {
+  .details1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .details {
+    background-size: cover;
+    padding: 40% 10% 0;
+    height: auto;
+  }
+
+  .image-row {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .image-container {
+    max-width: 140px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .details1 h1 {
+    font-size: 2rem;
+  }
+
+  .image-container {
+    max-width: 120px;
+    margin: 6px;
+  }
+
+  .details {
+    padding: 45% 5% 5%;
+    margin-top: -25%;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h3><span class="highlight">Our Gallery</span><br />Highlights and Moments</h3>
+  </div>
+
+  <div class="year-section">
+    <div class="years">
+      <span *ngFor="let y of ['16','17','18','19','20', '21', '22', '23', '24']"
+            (click)="changeYear(y)"
+            [class.active]="y === currentYear">{{ y }}</span>
+    </div>
+    <div class="year-labels">
+      <h1>20{{ currentYear }}</h1>
+      <h2 class="vertical-text">Year</h2>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <div *ngFor="let img of imageSets[currentYear]; let i = index"
+         class="img img{{ i + 1 }} direction{{ (i % 4) + 1 }}"
+         #imgRef>
+      <img [src]="'../../../../assets/gallerys/' + img + '.jpg'" alt="Gallery image">
+    </div>
+  </div>
+</div>

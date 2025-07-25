@@ -1,0 +1,15 @@
+<div class="card-container">
+  <div class="card" *ngFor="let card of cards">
+    <div class="image">
+      <img [src]="card.image" alt="Challenge Image">
+    </div>
+    <div class="content">
+      <h2>Challenge <span class="highlight">{{ card.title }}</span></h2>
+      <p class="date">Local Event: {{ card.location }}, {{ card.date }}</p>
+      <p class="challenge-label">Challenge:</p>
+      <p class="description">
+        {{ card.description }}
+      </p>
+    </div>
+  </div>
+</div>

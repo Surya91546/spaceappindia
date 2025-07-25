@@ -1,0 +1,56 @@
+<div class="tabs">
+  <div class="users">
+    <div class="tab" [class.active]="activeTab === 'details'" (click)="setActiveTab('details')">Details</div>
+    <div class="tab" [class.active]="activeTab === 'resources'" (click)="setActiveTab('resources')">Resources</div>
+    <div class="tab" [class.active]="activeTab === 'teams'" (click)="setActiveTab('teams')">Teams</div>
+  </div>
+</div>
+
+<div class="content">
+  <div *ngIf="activeTab === 'details'">
+    <h2>Above the context</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s. Lorem Ipsum is simply dummy text of the printing
+      and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+      unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+      centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+      the 1960s.
+    </p>
+
+    <div class="custom-video-box" (click)="playVideo()" [class.playing]="isPlaying">
+      <img *ngIf="!isPlaying" src="../../../assets/background.png" alt="Video thumbnail" class="video-thumbnail" />
+      <iframe *ngIf="isPlaying" class="masked-video" [src]="sanitizedVideoSrc" frameborder="0" allowfullscreen
+        allow="autoplay; encrypted-media">
+      </iframe>
+    </div>
+
+  </div>
+
+  <div *ngIf="activeTab === 'teams'" class="teams-content">
+    <div class="challenge">
+      <div class="search-wrapper">
+        <i class="bi bi-search"></i>
+        <input type="search" name="challenge" placeholder="Search for a Challenge">
+      </div>
+      <i class="bi bi-sliders2-vertical filter-icon"></i>
+    </div>
+
+    <div class="cards-container">
+      <div class="team-card" *ngFor="let card of [1, 2, 3]">
+        <h3>Team <span class="highlight">Expo</span></h3>
+        <p class="location">Local Event: PALA</p>
+        <p class="challenge-label">Challenge:</p>
+        <p class="challenge-title">An Aquatic Chemosynthesis</p>
+        <p class="tags">
+          <a href="#">Arts & Multimedia</a>,
+          <a href="#">Climate</a>,
+          <a href="#">Coding</a>,
+          <a href="#">Data Analysis</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

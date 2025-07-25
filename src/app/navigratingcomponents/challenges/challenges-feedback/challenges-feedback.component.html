@@ -1,0 +1,48 @@
+<div class="usersbackground py-16">
+  <div class="details-banner">
+    <div class="text-center mb-10 banner usersdetails">
+      <h2 class="text-4xl font-bold text-white mb-2">Loved by Challengers</h2>
+      <p class="text-gray-300">Here's what people are saying about us</p>
+    </div>
+
+    <!-- Top Row: Left to Right -->
+    <div class="scroll-wrapper cards">
+      <div class="scroll-track scroll-left" [style.animation-duration]="animationDuration + 's'">
+        <ng-container *ngFor="let i of [1, 2, 3]">
+          <ng-container *ngFor="let feedback of topRowFeedbacks" >
+            <div class="card">
+              <div class="card-header">
+                <div class="avatar"></div>
+                <div class="author">
+                  <h3>{{ feedback.name }}</h3>
+                  <p>@{{ feedback.handle }}</p>
+                </div>
+              </div>
+              <p class="card-text">{{ feedback.comment }}</p>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Bottom Row: Right to Left -->
+    <div class="scroll-wrapper mt-10">
+      <div class="scroll-track scroll-right" [style.animation-duration]="animationDuration + 's'">
+        <ng-container *ngFor="let i of [1, 2, 3]">
+          <ng-container *ngFor="let feedback of bottomRowFeedbacks">
+            <div class="card">
+              <div class="card-header">
+                <div class="avatar"></div>
+                <div class="author">
+                  <h3>{{ feedback.name }}</h3>
+                  <p>@{{ feedback.handle }}</p>
+                </div>
+              </div>
+              <p class="card-text">{{ feedback.comment }}</p>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

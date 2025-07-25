@@ -1,0 +1,23 @@
+<section>
+  <div class="details">
+    <h3>Our Passionate</h3>
+    <h1>Supporters and Collaborators</h1>
+    <p>
+      Founded upon a group of passionate volunteers who believe they can impact society, foster local innovation and
+      provide an opportunity for the Egyptian youth to collaborating in solving global challenges. There are many ways
+      to contribute and join our community. We welcome passionate volunteers, skilled mentors, potential partners and
+      more.
+    </p>
+  </div>
+
+  <div class="posters">
+    <div class="poster" *ngFor="let poster of posters">
+      <div class="poster-img">
+        <img [src]="poster.src" alt="{{ poster.title }}">
+        <div class="overlay">
+          <h2>{{ poster.title }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

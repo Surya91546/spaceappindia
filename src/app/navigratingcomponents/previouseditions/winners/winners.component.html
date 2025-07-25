@@ -1,0 +1,35 @@
+<div class="winners-container">
+  <div class="left">
+    <div class="trophy-wrapper">
+      <img src="../../../../assets//previous/winnertop.png" alt="Trophy" />
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>
+      <span class="highlight">Winners</span>
+    </h2>
+    <h2>of the Challenge</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s.
+    </p>
+
+    <div class="lists">
+      <div class="column">
+        <h3><span class="pipe">|</span> Global</h3>
+        <ul>
+          <li *ngFor="let team of globalWinners">{{ team }}</li>
+        </ul>
+      </div>
+      <div class="column column2">
+        <h3><span class="pipe">|</span> Local</h3>
+        <ul>
+          <li *ngFor="let team of localWinners">{{ team }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
