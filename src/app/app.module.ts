@@ -42,6 +42,9 @@ import { VideosbootComponent } from './navigratingcomponents/bootcamp/videosboot
 import { PreloadingComponent } from './navigratingcomponents/preloading/preloading.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { VideoGalleryComponent } from './navigratingcomponents/bootcamp/video-gallery/video-gallery.component';
+import { FormsModule } from '@angular/forms';
+import { RealworldComponent } from './navigratingcomponents/challenges/realworld/realworld.component';
 
 export function playerFactory() {
   return player;
@@ -85,13 +88,16 @@ export function playerFactory() {
     HighlightsComponent,
     MarsComponent,
     VideosbootComponent,
-    PreloadingComponent
+    PreloadingComponent,
+    VideoGalleryComponent,
+    RealworldComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

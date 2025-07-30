@@ -7,20 +7,17 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./videosboot.component.css']
 })
 export class VideosbootComponent {
- activeTab: string = 'details';
   isPlaying = false;
-
-  videoSrc: string = 'https://www.youtube.com/embed/dhYOPzcsbGM?autoplay=1';
   sanitizedVideoSrc!: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  setActiveTab(tab: string) {
-    this.activeTab = tab;
-  }
-
   playVideo() {
     this.isPlaying = true;
-    this.sanitizedVideoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoSrc);
+
+    const videoId = 'a178LZMdYl4';
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&rel=0`;
+
+    this.sanitizedVideoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
   }
 }

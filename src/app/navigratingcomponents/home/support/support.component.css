@@ -3,14 +3,31 @@ section {
   padding: 5% 0px;
 }
 
+.details1 {
+  text-align: center;
+  color: #FF8031;
+  padding: 10% 0px 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.details1 h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.desc {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 300 !important;
+}
+
 .details {
   background-image: url(../../../../assets/home/companies/banner.png);
   height: 120vh;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 31% 20% 0%;
-  margin-top: -20%;
-
+  padding: 25% 20% 0%;
+ 
 }
 
 .image-grid {
@@ -22,39 +39,36 @@ section {
 .image-row {
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: wrap;
 }
 
 .image-container {
   flex: 1;
   margin: 10px 20px;
-
 }
 
-.image-container img {
-  width: 96%;
+.image-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-card img {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-
+  object-fit: contain;
 }
 
-.details1 {
-  text-align: center;
-  color: #FF8031;
-  padding: 10% 0px 0px;
-  font-family: "Inter", sans-serif;
-}
-.details1 h1{
-  font-size: 3.5rem;
-  font-weight: 700;
-}
-
-.desc {
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-weight: 300 !important;
-}
 @media screen and (max-width: 992px) {
   .details1 h1 {
     font-size: 2.5rem;
@@ -67,7 +81,6 @@ section {
   }
 
   .image-row {
-    flex-direction: row;
     justify-content: center;
     gap: 20px;
   }

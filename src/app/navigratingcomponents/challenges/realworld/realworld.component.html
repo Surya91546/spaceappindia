@@ -1,0 +1,40 @@
+
+<!-- Main layout -->
+<div class="main-container">
+  <!-- Left Accordion -->
+  <div class="accordion">
+    <div *ngFor="let visit of visits; let i = index">
+      <div
+        class="accordion-item"
+        [class.active]="isSelected(i)"
+        (click)="selectVisit(i)">
+        <span>{{ visit.title }}</span>
+        <span class="icon">{{ isSelected(i) ? '−' : '+' }}</span>
+      </div>
+      <div class="accordion-desc" *ngIf="isSelected(i)">
+        <p>{{ visit.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Image Panel -->
+  <div class="image-panel">
+    <div>
+      <img
+        [src]="visits[selectedIndex].images[selectedImageIndex]"
+        [alt]="visits[selectedIndex].title"
+        class="visit-image"
+      />
+
+      <!-- Slider Dots -->
+      <div class="slider-dots">
+        <span
+          *ngFor="let img of visits[selectedIndex].images; let j = index"
+          class="dot"
+          [class.active-dot]="selectedImageIndex === j"
+          (click)="selectImage(j)">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

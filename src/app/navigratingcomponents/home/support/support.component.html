@@ -3,11 +3,14 @@
     <h1>Great Futures are built</h1>
     <h1 class="desc">with some Best Support</h1>
   </div>
+
   <div class="details">
     <div class="image-grid">
       <div class="image-row" *ngFor="let row of imageRows">
         <div class="image-container" *ngFor="let img of row">
-          <img [src]="img" alt="Image" />
+          <div class="image-card">
+            <img [src]="img" alt="Image" />
+          </div>
         </div>
       </div>
     </div>
