@@ -10,15 +10,15 @@ import { NewsComponent } from './navigratingcomponents/news/news.component';
 import { BootcampComponent } from './navigratingcomponents/bootcamp/bootcamp.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'Felicitation', component: ChallengesComponent },
   { path: 'bootcamp', component: BootcampComponent },
   { path: 'faqs', component: FaqsComponent },
   { path: 'previouseditions', component: PreviouseditionsComponent },
   { path: 'new', component: NewsComponent },
-  { path: '**', redirectTo: 'home' }
+  { path: '**', component:HomeComponent }
 ];
 
 @NgModule({

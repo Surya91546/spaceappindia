@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // loading = true;
+  loading = true;
 
-  // constructor(private router: Router) {}
+  constructor(private router: Router) {}
 
-  // onPreloadDone() {
-  //   this.loading = false;
-  //   this.router.navigate(['/home']); 
-  // }
+  onPreloadDone() {
+    this.loading = false;
+    this.router.navigate(['/home']); 
+  }
 }
