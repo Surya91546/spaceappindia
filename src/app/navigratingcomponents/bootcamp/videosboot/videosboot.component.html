@@ -1,8 +1,5 @@
-<div class="custom-video-box" (click)="playVideo()" [class.playing]="isPlaying">
-  <img *ngIf="!isPlaying" src="../../../assets/background.png" alt="Video thumbnail" class="video-thumbnail" />
-  
+<div class="custom-video-box playing">
   <iframe
-    *ngIf="isPlaying"
     class="masked-video"
     [src]="sanitizedVideoSrc"
     frameborder="0"

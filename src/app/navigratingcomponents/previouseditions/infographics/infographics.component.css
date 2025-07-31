@@ -22,25 +22,48 @@
   left: 50%;
   width: 120px;
   height: 80px;
-  margin: -40px 0 0 -60px; /* center the card on the point */
+  margin: -40px 0 0 -60px;
   background-color: #001f4d;
   color: white;
   border-radius: 8px;
   cursor: pointer;
   padding: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.CARD:HOVER{
-  
+.card:hover {
+  transform: scale(1.09);
 }
+
 .year {
   font-size: 18px;
   font-weight: bold;
+}
+
+/* ---------- Small screen layout ---------- */
+@media screen and (max-width: 768px) {
+  .arc {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+  }
+
+  .card {
+    position: static;
+    transform: none !important;
+    margin: 0;
+    width: 80%;
+    max-width: 320px;
+  }
 }

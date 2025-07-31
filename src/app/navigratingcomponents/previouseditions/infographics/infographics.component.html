@@ -4,7 +4,7 @@
     <strong>Infographics</strong>
   </h2>
 
-  <div class="arc">
+  <div class="arc" [class.small]="isSmallScreen">
     <div
       class="card"
       *ngFor="let card of cards; let i = index"

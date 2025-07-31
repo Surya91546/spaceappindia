@@ -317,3 +317,18 @@
     font-size: 14px;
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* Two cards in a row on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* One card per row on small screens */
+    padding: 20px;
+    gap: 20px;
+  }
+}

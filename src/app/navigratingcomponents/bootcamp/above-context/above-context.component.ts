@@ -11,7 +11,7 @@ export class AboveContextComponent {
   searchTerm = '';
   videoId: string = 'r8c5LsYsxlg';
   videoSrc: string = `https://www.youtube.com/embed/${this.videoId}?autoplay=1&mute=1&loop=1&playlist=${this.videoId}&controls=0&rel=0`;
-
+  letterSearchTerm = '';
   sanitizedVideoSrc!: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {
@@ -77,4 +77,40 @@ export class AboveContextComponent {
       card.title.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
+
+filteredLetters() {
+    return this.cards1.filter(card =>
+      this.isLetter(card) &&
+      (!this.letterSearchTerm || card.title.toLowerCase().includes(this.letterSearchTerm.toLowerCase()))
+    );
+  }
+
+  isLetter(card: { title: string; file: string }) {
+    return card.title.toLowerCase().includes('letter');
+  }
+
+cards1 = [
+  { title: '91 Springboard', file: '../../../assets/REPORTS/91%20Springboard.pdf' },
+  { title: 'Aditya Engineering College', file: '../../../assets/REPORTS/Aditya%20Engineering%20College.pdf' },
+
+  // Letter Entries (with proper descriptive titles)
+  { title: 'Letter - Space Apps 2018 Lead Letter (Keshav Tiwari and Team)', file: '../../../assets/LEADLETTERS/Keshav Tiwari and Team - Space Apps 2018 Lead Letter.pdf' },
+  { title: 'Letter - Local Lead Acceptance (Rishwanth Seguri, 2025)', file: '../../../assets/LEADLETTERS/Local Lead Acceptance Letter - 2025 NASA Space Apps Challenge - Rishwanth Seguri.pdf' },
+  { title: 'Letter - Local Lead Acceptance (Saikiran Katapally, 2025)', file: '../../../assets/LEADLETTERS/Local Lead Acceptance Letter - 2025 NASA Space Apps Challenge - Saikiran Katapally.pdf' },
+  { title: 'Letter - Local Lead Acceptance (Venkata S Sai, 2025)', file: '../../../assets/LEADLETTERS/Local Lead Acceptance Letter - 2025 NASA Space Apps Challenge - venkata s sai (1).pdf' },
+  { title: 'Letter - Local Lead Letter (Neeraj T, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Neeraj T.pdf' },
+  { title: 'Letter - Local Lead Letter (Ishitha Suryavanshi, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Ishitha Suryavanshi.pdf' },
+  { title: 'Letter - Local Lead Letter (Niharika Khopade, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Niharika Khopade.pdf' },
+  { title: 'Letter - Local Lead Letter (Rishwanth S, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Rishwanth S.pdf' },
+  { title: 'Letter - Local Lead Letter (Spoorthy D, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Spoorthy D.pdf' },
+  { title: 'Letter - Local Lead Letter (Vamshi D, 2023)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2023 Local Lead Letter - Vamshi D.pdf' },
+  { title: 'Letter - Local Lead Letter (Saikiran Katapally, 2024)', file: '../../../assets/LEADLETTERS/NASA Space Apps 2024 Local Lead Letter - Saikiran Katapally.pdf' },
+  { title: 'Letter - SAC2021 Local Lead (Hima Sai Keerthi Busanaboyina)', file: '../../../assets/LEADLETTERS/SAC2021_Local Lead Letter_ Hima Sai Keerthi Busanaboyina.pdf' },
+  { title: 'Letter - SAC2021 Local Lead (Keshav Tiwari)', file: '../../../assets/LEADLETTERS/SAC2021_Local Lead Letter_ Keshav Tiwari.pdf' },
+  { title: 'Letter - Space Apps 2023 Lead Letter (General)', file: '../../../assets/LEADLETTERS/Space Apps 2023 Lead.pdf' },
+  { title: 'Letter - Local Lead Approval (Chakradhar Sangepu, 2023)', file: '../../../assets/LEADLETTERS/Space Apps 2023 Local Lead Approval Letter - Chakradhar Sangepu.pdf' },
+  { title: 'Letter - Local Lead Approval (Saikiran Katapally, 2023)', file: '../../../assets/LEADLETTERS/Space Apps 2023 Local Lead Approval Letter - Saikiran Katapally.pdf' },
+  { title: 'Letter - Local Lead Letter (Anishka K, 2023)', file: '../../../assets/LEADLETTERS/Space Apps 2023 Local Lead Letter - Anishka K.pdf' }
+];
+
 }

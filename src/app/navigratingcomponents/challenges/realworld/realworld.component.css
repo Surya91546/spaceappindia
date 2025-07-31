@@ -101,3 +101,42 @@
 .active-dot {
   background-color: #032344;
 }
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .accordion {
+    max-width: 100%;
+  }
+
+  .image-panel {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  .visit-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accordion-item {
+    font-size: 16px;
+  }
+
+  .accordion-desc {
+    font-size: 14px;
+  }
+
+  .slider-dots {
+    gap: 8px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}

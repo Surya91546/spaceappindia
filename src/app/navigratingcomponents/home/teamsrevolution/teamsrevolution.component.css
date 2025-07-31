@@ -22,3 +22,43 @@ section {
 .container{
   margin: 0% 6%;
 }
+/* Tablets (≤ 992px) */
+@media screen and (max-width: 992px) {
+  .title {
+    font-size: 2.5rem;
+    padding: 6% 0;
+  }
+
+  .card {
+    max-width: 60%; /* Reduced from 100% to 60% */
+    margin: 0 auto;
+  }
+
+  .col-md-4 {
+    width: 100%;
+    margin: 4% 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Phones (≤ 576px) */
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+    padding: 8% 0;
+  }
+
+  .card {
+    max-width: 80%; /* Smaller cards on phones */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .col-md-4 {
+    margin: 6% 0;
+  }
+}

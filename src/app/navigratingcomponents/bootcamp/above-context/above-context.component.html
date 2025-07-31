@@ -44,4 +44,26 @@
       </div>
     </div>
   </div>
+  <div *ngIf="activeTab === 'letter'" class="teams-content">
+  <div class="challenge">
+    <div class="search-wrapper">
+      <i class="bi bi-search"></i>
+      <input type="search" [(ngModel)]="letterSearchTerm" placeholder="Search for a Letter">
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <div class="team-card" *ngFor="let card of filteredLetters()" (click)="openDocument(card.file)">
+      <h3>Letter <span class="highlight"></span></h3>
+      <p class="location"></p>
+      <p class="challenge-label">Document:</p>
+      <p class="challenge-title">{{ card.title }}</p>
+      <p class="tags">
+        <a href="#">Letter</a>,
+        <a href="#">PDF</a>
+      </p>
+    </div>
+  </div>
+</div>
+
 </div>
