@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 60px;
   gap: 40px;
-  margin: 10% 8% 0%;
+  margin: 10% 6% 0%;
 
   @media (max-width: 992px) {
     flex-direction: column;

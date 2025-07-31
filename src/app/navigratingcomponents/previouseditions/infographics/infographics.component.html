@@ -1,0 +1,17 @@
+<div class="container1">
+  <h2>
+    <span class="highlight">Have a Look at</span> <br />
+    <strong>Infographics</strong>
+  </h2>
+
+  <div class="arc">
+    <div
+      class="card"
+      *ngFor="let card of cards; let i = index"
+      (click)="openPDF(card.link)"
+    >
+      <div>Space Apps</div>
+      <div class="year">{{ card.year }}</div>
+    </div>
+  </div>
+</div>

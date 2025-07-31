@@ -9,11 +9,13 @@
   <div *ngIf="activeTab === 'details'">
     <h2>Above the context</h2>
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+      The "Trap Where Conducted" video showcases a suspenseful setup where individuals unknowingly enter a concealed
+      trap. Tension builds as the environment gradually reveals its hidden dangers.
     </p>
 
     <div class="custom-video-box playing">
-      <iframe class="masked-video" [src]="sanitizedVideoSrc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe class="masked-video" [src]="sanitizedVideoSrc" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
     </div>
 
     <app-video-gallery></app-video-gallery>

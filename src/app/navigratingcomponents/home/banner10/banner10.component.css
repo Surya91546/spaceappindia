@@ -24,7 +24,7 @@
 .details{
   display: flex;
   text-align: start;
-  padding: 6.5% 2% 0;
+  padding: 33% 2% 0;
 }
 .details .data h2{
   font-size: 1.3rem;
@@ -48,20 +48,7 @@
   font-size: 3rem;
   margin-top: -10%;
 }
-canvas {
-  background: transparent !important;
-}
-.earth{
-  margin: 0px 0px 0px 48%;
-}
 
-.earth-banner{
-  display: flex;
-  color: #fff;
-}
-.earth-banner .logo img{
-  margin: 17px 0px 0 20px;
-}
 /* Your existing CSS remains same */
 
 /* Responsive for Large screens (1200px and below) */
@@ -81,9 +68,7 @@ canvas {
   .details .data-right h2 {
     font-size: 2.5rem;
   }
-  .earth {
-    margin: 0 0 0 40%;
-  }
+  
 }
 
 /* Responsive for Medium screens (992px and below) */
@@ -116,9 +101,7 @@ canvas {
     padding: 3% 0 0;
     text-align: center;
   }
-  .earth {
-    margin: 0 auto;
-  }
+  
 }
 
 /* Responsive for Small screens (768px and below) */

@@ -45,6 +45,7 @@ import player from 'lottie-web';
 import { VideoGalleryComponent } from './navigratingcomponents/bootcamp/video-gallery/video-gallery.component';
 import { FormsModule } from '@angular/forms';
 import { RealworldComponent } from './navigratingcomponents/challenges/realworld/realworld.component';
+import { InfographicsComponent } from './navigratingcomponents/previouseditions/infographics/infographics.component';
 
 export function playerFactory() {
   return player;
@@ -90,7 +91,8 @@ export function playerFactory() {
     VideosbootComponent,
     PreloadingComponent,
     VideoGalleryComponent,
-    RealworldComponent
+    RealworldComponent,
+    InfographicsComponent
   ],
   imports: [
     BrowserModule,
