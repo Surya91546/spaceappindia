@@ -15,8 +15,8 @@ export class HighlightsComponent {
   playVideo() {
     this.isPlaying = true;
 
-    // Embed YouTube video with autoplay
-    const embedUrl = 'https://www.youtube.com/embed/BNudOS8PdCU?autoplay=1';
+    // Embed URL with autoplay
+    const embedUrl = 'https://www.youtube.com/embed/lItgfaEub4U?autoplay=1';
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
   }
 }

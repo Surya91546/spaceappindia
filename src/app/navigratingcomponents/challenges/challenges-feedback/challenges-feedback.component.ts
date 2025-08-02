@@ -19,7 +19,7 @@ export class ChallengesFeedbackComponent {
     },
     {
       name: 'Srinivas Kollipara',
-      handle: 'CEO, T-Hub',
+      handle: 'COO, T-Hub',
       comment: 'This is going national, expecting more participation. Students came up with brilliant ideas last year!',
     },
   ];
@@ -27,7 +27,7 @@ export class ChallengesFeedbackComponent {
   bottomRowFeedbacks = [
     {
       name: 'Phanindra Sama',
-      handle: 'Chief Innovation Officer',
+      handle: 'Founder Of Red Bus',
       comment: 'Big congrats to NASA Space Apps 2018 participants! Keep testing your imagination through such events.',
     },
     {

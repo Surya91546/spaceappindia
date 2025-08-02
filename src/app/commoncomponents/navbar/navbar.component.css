@@ -1,4 +1,16 @@
-/* Offcanvas style */
+/* Navbar base styles */
+.navbar {
+  transition: background-color 0.4s ease, box-shadow 0.3s ease;
+  z-index: 1030;
+}
+
+/* Scrolled navbar */
+.navbar.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Offcanvas menu */
 .offcanvas-body {
   background: linear-gradient(90deg, #06172C 0%, #01294F 52%, #06172C 100%) !important;
   max-width: 90%;
@@ -9,7 +21,7 @@
 /* Navbar links */
 .nav-item a {
   color: #FFFFFF !important;
-  padding: 20px 2rem;
+  padding: 28px 2rem;
   font-family: "Inter", sans-serif;
   transition: color 0.3s ease;
   text-decoration: none;
@@ -20,20 +32,21 @@
   color: #FF8031 !important;
 }
 
-/* Active route highlight */
+/* Active route */
 .active-link {
   color: #f58b49 !important;
   font-weight: 600;
+ 
   filter: drop-shadow(2px 2px 10px #f58b49);
 }
 
-/* Logo image */
+/* Logo */
 img {
   max-width: 15% !important;
   margin: 2%;
 }
 
-/* Brochure button styling */
+/* Brochure button */
 .nav-item button {
   background-color: #FF8031;
   padding: 10px 20px;
@@ -48,7 +61,6 @@ img {
 .nav-item button a {
   text-decoration: none;
   color: #fff;
-  padding: 0px;
 }
 
 .nav-item button a:hover {
@@ -56,5 +68,24 @@ img {
 }
 
 .nav-item button:hover {
+  background-color: #f58b49;
+}
+
+/* Override styles on scroll */
+.navbar.scrolled .nav-item a {
+  color: #fff !important;
+}
+
+.navbar.scrolled .active-link {
+  color: #FF8031 !important;
+  filter: drop-shadow(2px 2px 6px #FF8031);
+}
+
+.navbar.scrolled .brochure {
+  background-color: #FF8031;
+  color: white;
+}
+
+.navbar.scrolled .brochure:hover {
   background-color: #f58b49;
 }

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top"
+     [ngClass]="{'scrolled': isScrolled, 'navbar-light bg-transparent': !isScrolled, 'navbar-light bg-white': isScrolled}">
   <div class="container-fluid">
     <img src="../../../assets/logo/Space Apps India.png" alt="check the connection">
 
@@ -29,16 +30,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/bootcamp" routerLinkActive="active-link"
-              [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">Bootcamp</a>
+              [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">Report</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/previouseditions" routerLinkActive="active-link"
-              [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">Previous Editions</a>
+              [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">Gallery</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" routerLink="/new" routerLinkActive="active-link"
-              [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">News</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" routerLink="/faqs" routerLinkActive="active-link"
               [routerLinkActiveOptions]="{ exact: true }" (click)="closeOffcanvas()">FAQs</a>

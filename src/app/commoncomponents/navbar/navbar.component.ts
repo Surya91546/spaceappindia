@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 declare var bootstrap: any;
@@ -9,6 +9,8 @@ declare var bootstrap: any;
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  isScrolled = false;
 
   constructor(private router: Router) {}
 
@@ -26,5 +28,10 @@ export class NavbarComponent implements OnInit {
     this.router.events.subscribe(() => {
       this.closeOffcanvas();
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
 }
