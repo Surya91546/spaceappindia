@@ -7,7 +7,7 @@
 </div>
 
 <div class="content">
-  <div *ngIf="activeTab === 'details'">
+  <!-- <div *ngIf="activeTab === 'details'">
     <h2>Above the context</h2>
     <p>
       The "Trap Where Conducted" video showcases a suspenseful setup where individuals unknowingly enter a concealed
@@ -20,13 +20,34 @@
     </div>
 
     <app-video-gallery></app-video-gallery>
-  </div>
-
-  <div *ngIf="activeTab === 'teams'" class="teams-content">
+  </div> -->
+  <div *ngIf="activeTab === 'details'" class="teams-content">
     <div class="challenge">
       <div class="search-wrapper">
         <i class="bi bi-search"></i>
         <input type="search" [(ngModel)]="searchTerm" placeholder="Search for a Challenge">
+      </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="team-card" *ngFor="let card of filteredCards()" (click)="openDocument(card.file)">
+        <h3>Report <span class="highlight"></span></h3>
+        <p class="location"></p>
+        <p class="challenge-label">Document:</p>
+        <p class="challenge-title">{{ card.title }}</p>
+        <p class="tags">
+          <a href="#">Education</a>,
+          <a href="#">PDF</a>,
+          <a href="#">Report</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="activeTab === 'teams'" class="teams-content">
+    <div class="challenge">
+      <div class="search-wrapper">
+        <i class="bi bi-search"></i>
+        <input type="search" [(ngModel)]="searchTerm" placeholder="Search for a Reports">
       </div>
     </div>
 

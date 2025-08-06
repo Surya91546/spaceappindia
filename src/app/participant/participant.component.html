@@ -1,0 +1,23 @@
+<div class="gallery-container">
+  <h2>Gallery - {{ year }}</h2>
+  <div class="gallery">
+    <div class="image-box" *ngFor="let image of images" (click)="openModal(image)">
+      <img [src]="image" [alt]="'Image for ' + year" />
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Image Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img [src]="selectedImage" class="img-fluid rounded" alt="Selected Image" />
+      </div>
+    </div>
+  </div>
+</div>

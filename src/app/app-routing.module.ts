@@ -8,17 +8,19 @@ import { FaqsComponent } from './navigratingcomponents/faqs/faqs.component';
 import { PreviouseditionsComponent } from './navigratingcomponents/previouseditions/previouseditions.component';
 import { NewsComponent } from './navigratingcomponents/news/news.component';
 import { BootcampComponent } from './navigratingcomponents/bootcamp/bootcamp.component';
+import { ParticipantComponent } from './participant/participant.component';
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'Felicitation', component: ChallengesComponent },
+  { path: 'participants/:year', component: ParticipantComponent },
   { path: 'bootcamp', component: BootcampComponent },
   { path: 'faqs', component: FaqsComponent },
   { path: 'previouseditions', component: PreviouseditionsComponent },
   { path: 'new', component: NewsComponent },
-  { path: '**', component:HomeComponent }
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

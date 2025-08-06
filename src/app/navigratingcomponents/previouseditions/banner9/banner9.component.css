@@ -1,12 +1,10 @@
 .banner {
-  background-image: url(../../../../assets/previous/previous.png);
-  height: 140vh;
-  background-position: center center;
+  background-image: url(../../../../assets/SpaceAppIndia2025.jpg);
   background-size: cover;
+  height: 110vh;
   background-repeat: no-repeat;
   text-align: center;
   padding: 5% 0px;
-  margin: 8% 0;
 }
 
 .banner h1 {

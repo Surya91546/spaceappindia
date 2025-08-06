@@ -22,12 +22,7 @@ section {
 }
 
 .details {
-  background-image: url(../../../../assets/home/companies/banner.png);
-  height: 120vh;
-  background-position: center center;
-  background-repeat: no-repeat;
   padding: 25% 20% 0%;
- 
 }
 
 .image-grid {

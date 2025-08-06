@@ -2,7 +2,7 @@
 .custom-video-box {
   width: 100%;
   max-width: 900px;
-  margin: auto;
+  margin: 10% auto;
   position: relative;
   cursor: pointer;
   aspect-ratio: 16 / 9;

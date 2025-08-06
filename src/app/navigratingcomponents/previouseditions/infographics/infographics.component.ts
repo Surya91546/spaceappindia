@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; // <-- Add this
 
 @Component({
   selector: 'app-infographics',
@@ -8,16 +9,18 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class InfographicsComponent implements OnInit {
   isSmallScreen = false;
 
+  constructor(private router: Router) {} // <-- Inject Router
+
   cards = [
-    { year: '2016', link: '../../../assets/INFOGRAPH/SPACEAPPS_2016_INFOGRAPHIC_P╞Æ (1).pdf' },
-    { year: '2017', link: '../../../assets/INFOGRAPH/spaceapps-acceleratortoolkit final.pdf' },
-    { year: '2018', link: '../../../assets/INFOGRAPH/NASA_Infographic_2018.pdf' },
-    { year: '2019', link: '../../../assets/INFOGRAPH/SPACEAPPS_2019_THENUMBERS_╞Æ (1).pdf' },
-    { year: '2020', link: '../../../assets/INFOGRAPH/NASA_Space_Apps_2020_Infographic_Final-2.pdf' },
-    { year: '2021', link: '../../../assets/INFOGRAPH/2021_Space_Apps_by_the_Numbers.pdf' },
-    { year: '2022', link: '../../../assets/INFOGRAPH/2022_Space_Apps_Infographic_FINAL-2.pdf' },
-    { year: '2023', link: '../../../assets/INFOGRAPH/2023_NASA_International_Space_Apps_Challenge_Infographic_Final.pdf' },
-    { year: '2024', link: '../../../assets/INFOGRAPH/2024_NASA_International_Space_Apps_Challenge_.width-1024-2.png' }
+    { year: '2016', route: '/participants/2016' },
+    { year: '2017', route: '/participants/2017' },
+    { year: '2018', route: '/participants/2018' },
+    { year: '2019', route: '/participants/2019' },
+    { year: '2020', route: '/participants/2020' },
+    { year: '2021', route: '/participants/2021' },
+    { year: '2022', route: '/participants/2022' },
+    { year: '2023', route: '/participants/2023' },
+    { year: '2024', route: '/participants/2024' }
   ];
 
   ngOnInit() {
@@ -29,8 +32,8 @@ export class InfographicsComponent implements OnInit {
     this.isSmallScreen = window.innerWidth <= 768;
   }
 
-  openPDF(link: string) {
-    window.open(link, '_blank');
+  openPDF(route: string) {
+    this.router.navigateByUrl(route); // <-- Navigate using Router
   }
 
   getCardTransform(index: number, total: number): string {
